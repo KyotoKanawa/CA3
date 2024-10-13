@@ -35,8 +35,13 @@
   =
   <input type="number" id="cups" name="cups" placeholder="cups">
   <button onclick="convert()">Convert</button>
-  
-
+  <script>
+    function convert() {
+      const tablespoons = document.getElementById('tablespoons').value;
+      const cups = tablespoons / 16; // Assuming 16 tablespoons in a cup
+      document.getElementById('cups').value = cups;
+    }
+  </script>
 
 
   <<h3>Rate this recipe</h3> 
@@ -50,7 +55,7 @@
       <input type="radio" id="hard" name="difficulty" value="hard">
     </fieldset>
 
-  
+
   <h3>Directions</h3>
   <ol>
     <li>In a bowl, layer half of the Greek yogurt.</li>
